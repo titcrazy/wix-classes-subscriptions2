@@ -31,9 +31,10 @@ export const NumberBox = ({ num, unit, flip }: NumProp) => {
 
       {/* Unit text below the number box */}
       <div className="overflow-auto">
-        <p className="text-lg mt-1 font-semibold md:text-2xl text-[#dad9d9]">{unit}</p>
+        <p className="text-lg mt-1 font-semibold md:text-2xl text-[#dad9d9]">
+          {unit}
+        </p>
       </div>
     </div>
   );
 };
-

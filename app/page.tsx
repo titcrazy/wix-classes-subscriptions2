@@ -6,13 +6,20 @@ import {
 } from '@app/model/gallery/fitness-instructor';
 import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
-import {Amatic_SC, Dancing_Script, Great_Vibes, Parisienne, Sacramento, Shadows_Into_Light } from '@next/font/google';
+import {
+  Amatic_SC,
+  Dancing_Script,
+  Great_Vibes,
+  Parisienne,
+  Sacramento,
+  Shadows_Into_Light,
+} from '@next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
-import { Chrono } from "react-chrono";
-import data from "app/components/TimelineData/Data.js";
+import { Chrono } from 'react-chrono';
+import data from 'app/components/TimelineData/Data.js';
 
-const ShadowIntoLight = Amatic_SC({ 
-  weight: "400",
+const ShadowIntoLight = Amatic_SC({
+  weight: '400',
   subsets: ['latin'],
 });
 
@@ -104,34 +111,32 @@ export default async function Home() {
         data-testid={testIds.HOME_PAGE.HEADER}
       >
         <section className="py-[355px]">
-          <h1 style={ShadowIntoLight.style} className="tracking-[.1em]">This is the story about us</h1>
+          <h1 style={ShadowIntoLight.style} className="tracking-[.1em]">
+            This is the story about us
+          </h1>
           <div className="pt-7">
-            <div className="tracking-[.1em] text-3xl uppercase font-open-sans-condensed">happy anniversary bby ❤️</div>
+            <div className="tracking-[.1em] text-3xl uppercase font-open-sans-condensed">
+              happy anniversary bby ❤️
+            </div>
           </div>
 
-          <div className=''>
-            <CountUpTimer/> 
+          <div className="">
+            <CountUpTimer />
           </div>
-
         </section>
       </div>
 
       <ScrollIntoView hashName="#about" offset="-90px" />
       <div className="min-h-screen bg-[url('/home/fitness-background-2.jpg')] parallax-background">
-        <div style={{ width: "100%", height: "500px" }}>
-            <Chrono items={data} mode="HORIZONTAL" />
+        <div style={{ width: '100%', height: '500px' }}>
+          <Chrono items={data} mode="HORIZONTAL" />
         </div>
-        
+
         <div className="max-w-full-content mx-auto box-content pt-2">
-
-
-
           <div className="max-w-[400px] pt-10 pb-2">
             <h2 className="uppercase text-7xl leading-tight py-7">
               Meet The Coach
             </h2>
-
-
 
             <section className="mt-5">
               <ul aria-label="Social Bar" className="flex gap-2 invert -ml-3">
