@@ -19,7 +19,7 @@ export const StyledNavLink = ({
     className={`${
       className ?? ''
     } font-open-sans-condensed uppercase hover:text-highlight ${
-      isActive ? 'text-white' : 'text-stone-400'
+      isActive ? 'text-[#6c6c6c]' : 'text-white'
     }`}
     {...linkProps}
   />

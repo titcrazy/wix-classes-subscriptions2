@@ -11,12 +11,14 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@next/font": "^14.0.3",
     "@tanstack/react-query": "^4.24.4",
+    "@wix/api-client": "^1.5.7",
     "@wix/bookings": "^1.0.136",
     "@wix/members": "^1.0.38",
     "@wix/pricing-plans": "^1.0.17",
     "@wix/redirects": "^1.0.13",
-    "@wix/sdk": "^1.5.0",
+    "@wix/sdk": "^1.5.7",
     "cookie": "^0.5.0",
     "date-fns": "^2.29.3",
     "flowbite": "^1.6.3",
@@ -25,6 +27,7 @@
     "jsurl": "^0.1.5",
     "next": "^13.4.9",
     "react": "18.2.0",
+    "react-chrono": "^2.3.1",
     "react-day-picker": "^8.5.1",
     "react-dom": "18.2.0"
   },

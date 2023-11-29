@@ -1,3 +1,5 @@
+'use client'
+
 import './page.css';
 import Image from 'next/image';
 import {
@@ -6,6 +8,15 @@ import {
 } from '@app/model/gallery/fitness-instructor';
 import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
+import {Amatic_SC, Dancing_Script, Great_Vibes, Parisienne, Sacramento, Shadows_Into_Light } from '@next/font/google';
+import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
+import { Chrono } from "react-chrono";
+import data from "app/components/TimelineData/Data.js";
+
+const ShadowIntoLight = Amatic_SC({ 
+  weight: "400",
+  subsets: ['latin'],
+});
 
 const TrainingOptionSelection = ({
   text,
@@ -91,77 +102,39 @@ export default async function Home() {
   return (
     <div>
       <div
-        className="text-center min-h-screen bg-[url('/home/fitness-background-1.jpg')] parallax-background"
+        className="text-center min-h-screen bg-cover bg-center bg-[url('/home/image.jpg')] bg-opacity-75 parallax-background"
         data-testid={testIds.HOME_PAGE.HEADER}
       >
         <section className="py-[355px]">
-          <h1 className="tracking-widest">Joey Dixon</h1>
+          <h1 style={ShadowIntoLight.style} className="tracking-[.1em]">This is the story about us</h1>
           <div className="pt-7">
-            <div className="tracking-[.4em] text-3xl uppercase">
-              Training with a World Champion
-            </div>
+            <div className="tracking-[.1em] text-3xl uppercase font-open-sans-condensed">happy anniversary bby ❤️</div>
           </div>
-          <div className="pt-14 flex gap-8 justify-center">
-            <a
-              className="btn-secondary text-lg px-7"
-              href="/classes-schedule"
-              data-testid={testIds.HOME_PAGE.BOOK_CLASS_CTA}
-            >
-              Book Now
-            </a>
-            <a
-              className="btn-main text-lg px-7"
-              href="/plans"
-              data-testid={testIds.HOME_PAGE.BOOK_PLAN_CTA}
-            >
-              Membership
-            </a>
+
+          <div className=''>
+            <CountUpTimer/> 
           </div>
-        </section>
-        <section className="flex flex-col sm:flex-row pt-1 pb-7 bg-gray-c1 cursor-pointer">
-          <TrainingOptionSelection
-            href="/training"
-            text="Beginners"
-            className="sm:justify-end"
-            bgImageSrc="bg-[url('/home/beginners.jpg')]"
-          />
-          <TrainingOptionSelection
-            href="/training"
-            text="Professionals"
-            className="sm:justify-start"
-            bgImageSrc="bg-[url('/home/professionals.jpg')]"
-          />
+
         </section>
       </div>
+
       <ScrollIntoView hashName="#about" offset="-90px" />
       <div className="min-h-screen bg-[url('/home/fitness-background-2.jpg')] parallax-background">
+        <div style={{ width: "100%", height: "500px" }}>
+            <Chrono items={data} mode="HORIZONTAL" />
+        </div>
+        
         <div className="max-w-full-content mx-auto box-content pt-2">
+
+
+
           <div className="max-w-[400px] pt-10 pb-2">
             <h2 className="uppercase text-7xl leading-tight py-7">
               Meet The Coach
             </h2>
-            <section className="font-open-sans-condensed text-base text-stone-300 tracking-wider">
-              <p className="py-3">
-                {`Hi, I’m Joey Dixon and I’m a boxing coach with 15 years of boxing experience and 9 intercontinental cruiserweight titles. 
-                I’ve trained many successful boxers at national and international levels. I love teaching people how to box like a pro,
-                whether they are beginners or advanced fighters.
-                `}
-              </p>
-              <p className="py-3">
-                {`To me, boxing is not only a sport, but also a way of life.
-                It teaches you discipline, resilience, confidence, and self-defense. It also keeps you fit, healthy, and mentally sharp.
-                That’s why I created this business to share my knowledge and skills with you.`}
-              </p>
-              <p className="py-3">
-                {`I have a friendly and supportive approach that will make you feel comfortable and motivated.
-                I also have a wealth of experience and expertise that will make you learn faster and better.
-                No matter what your age, level, or background, I can help you become the best boxer you can be.`}
-              </p>
-              <p className="py-3">
-                {`If you are interested in working with me or learning more about me, please feel free to contact me or browse through my website.
-                I look forward to hearing from you and helping you on your boxing journey.`}
-              </p>
-            </section>
+
+
+
             <section className="mt-5">
               <ul aria-label="Social Bar" className="flex gap-2 invert -ml-3">
                 <li>
