@@ -1,5 +1,3 @@
-'use client'
-
 import './page.css';
 import Image from 'next/image';
 import {
