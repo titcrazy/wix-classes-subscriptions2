@@ -9,7 +9,7 @@ import {
 import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
 import {
-  Amatic_SC,
+  Amatic_SC
 } from '@next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
 import { Chrono } from 'react-chrono';
@@ -100,7 +100,7 @@ const GalleryItem = ({
   </li>
 );
 
-export default async function Home() {
+export default function Home() {
   return (
     <div>
       <div
