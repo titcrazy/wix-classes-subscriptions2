@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import './page.css';
 import Image from 'next/image';
@@ -10,11 +10,6 @@ import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
 import {
   Amatic_SC,
-  Dancing_Script,
-  Great_Vibes,
-  Parisienne,
-  Sacramento,
-  Shadows_Into_Light,
 } from '@next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
 import { Chrono } from 'react-chrono';
