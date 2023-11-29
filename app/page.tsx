@@ -8,9 +8,7 @@ import {
 } from '@app/model/gallery/fitness-instructor';
 import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
-import {
-  Amatic_SC
-} from '@next/font/google';
+import { Amatic_SC } from '@next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
 import { Chrono } from 'react-chrono';
 import data from 'app/components/TimelineData/Data.js';
