@@ -8,10 +8,10 @@ import {
 } from '@app/model/gallery/fitness-instructor';
 import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
-import { Amatic_SC } from '@next/font/google';
+import { Amatic_SC } from 'next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
-import { Chrono } from 'react-chrono';
-import data from 'app/components/TimelineData/Data.js';
+import App from "app/components/TimelineData/TimelineApp"
+import { max } from 'date-fns';
 
 const ShadowIntoLight = Amatic_SC({
   weight: '400',
@@ -114,7 +114,7 @@ export default function Home() {
               happy anniversary bby ❤️
             </div>
           </div>
-
+          
           <div className="">
             <CountUpTimer />
           </div>
@@ -123,8 +123,9 @@ export default function Home() {
 
       <ScrollIntoView hashName="#about" offset="-90px" />
       <div className="min-h-screen bg-[url('/home/fitness-background-2.jpg')] parallax-background">
+
         <div style={{ width: '100%', height: '500px' }}>
-          <Chrono items={data} mode="HORIZONTAL" />
+          {/* <App /> */}
         </div>
 
         <div className="max-w-full-content mx-auto box-content pt-2">
@@ -181,73 +182,29 @@ export default function Home() {
             </section>
           </div>
         </div>
-        <section className="bg-[url('/home/coacher-achievements-background.jpg')] bg-center bg-cover">
-          <div className="max-w-full-content px-4 mx-auto text-black">
-            <h2 className="title pt-24 pb-20 tracking-[.3em] text-center">
-              My Experience
-            </h2>
-            <ul className="grid grid-cols-2 lg:grid-cols-4 gap-16 pb-20 px-2">
-              <AchievementItem
-                title="15"
-                tagline="15 YEARS OF BOXING EXPERIENCE"
-              />
-              <AchievementItem
-                title="3"
-                tagline="3 TIMES WBA INTERCONTINENTAL CRUISERWEIGHT"
-              />
-              <AchievementItem
-                title="4"
-                tagline="4 TIMES WBC INTERCONTINENTAL CRUISERWEIGHT"
-              />
-              <AchievementItem
-                title="2"
-                tagline="2 TIMES IBF INTERCONTINENTAL CRUISERWEIGHT"
-              />
-            </ul>
-          </div>
-        </section>
-        <section className="bg-gray-c2">
-          <div className="max-w-full-content px-4 mx-auto py-20 flex flex-col gap-10 items-center">
-            <h3 className="text-3xl uppercase tracking-[.4em] pt-7">
-              Start Training Today
-            </h3>
-            <a
-              className="btn-secondary px-10 text-lg px-7"
-              href="/classes-schedule"
-            >
-              Book a Session
-            </a>
-          </div>
-        </section>
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryItems.map((item) => (
-            <GalleryItem item={item} key={item.id} />
-          ))}
-        </section>
       </div>
+      
       <ScrollIntoView hashName="#studio" offset="-90px" />
-      <div className="text-center py-24 bg-[url('/home/fitness-background-3.jpg')] parallax-background">
-        <div className="mx-auto max-w-md px-2">
-          <h2 className="title tracking-widest">THE STUDIO</h2>
-          <div className="pt-7 font-open-sans-condensed text-lg text-stone-300">
-            {`We train in a modern and spacious facility, conveniently located in the heart of San Francisco.
-            We have the equipment, facilities and expertise to take on clients of all ages and experience levels. Come by and check us out!`}
+      <div className="flex">
+        <div className='bg-[#94746e] parallax-background w-1/2 flex justify-center'>
+          <div className="max-w-md py-16" >
+            <h2 className="title tracking-widest">A MESSAGE TO MY LITTLE PRINCESS</h2>
+            <div className="pt-7 font-open-sans-condensed text-lg text-stone-300">
+              {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in quam non justo dapibus rhoncus eu at magna. Nulla non sapien pulvinar, hendrerit lacus sed, semper nisi. Aenean metus arcu, laoreet vel magna ac, lobortis iaculis mi. Cras suscipit accumsan blandit. Sed gravida enim at est efficitur blandit a non ligula. Duis purus lorem, consectetur eu consequat nec, viverra sed urna. Curabitur et pretium ex, posuere gravida enim. Donec commodo arcu leo, a mattis nunc viverra vel. Duis id finibus sem. Nulla hendrerit nibh quis mauris tincidunt sodales. Sed pellentesque risus sed nibh eleifend efficitur. In eu dictum magna, eget elementum ipsum. Nullam quam nisi, aliquam vel nisi sit amet, ornare sollicitudin ex.
+
+Ut elementum neque justo, eu vehicula enim iaculis nec. Donec nec nisi interdum lacus scelerisque sagittis at non justo. Duis sollicitudin lacus eget turpis dignissim aliquet. Sed consequat arcu non malesuada rutrum. Morbi vestibulum dolor malesuada velit sollicitudin, eget egestas libero vehicula. Ut in dui magna. Sed id turpis eget erat congue mollis. Duis rutrum scelerisque diam sed tincidunt. Nulla sem metus, vestibulum non suscipit sit amet, egestas vestibulum metus. Aenean eget sem justo.
+
+Nam euismod ligula id arcu ultricies faucibus. Aliquam vel tincidunt ex, ut tempor quam. Nunc rutrum mi eu nunc tempus facilisis. Mauris finibus sodales nibh, quis porttitor arcu lobortis id. Etiam posuere enim elit, ac scelerisque ex consectetur sit amet. Vivamus congue elementum velit, sed accumsan augue interdum et. Integer at tellus id arcu tincidunt porta.
+
+Pellentesque sodales viverra neque a maximus. In pulvinar in augue in consectetur. In quis nulla justo. Curabitur eu lacus velit. Fusce rutrum sollicitudin nunc. Etiam nec nisi pharetra, vulputate velit at, molestie sapien. Vestibulum scelerisque lorem in tempus commodo. Etiam vitae vulputate ipsum. Maecenas sed elit eget lectus sodales cursus vel at erat. Sed iaculis nunc magna, sit amet tincidunt augue eleifend eget. Fusce leo libero, posuere eu placerat eget, cursus a ante. Etiam congue lacus a ligula pellentesque, vitae accumsan libero ultrices. Morbi dapibus ullamcorper tortor, quis egestas mauris vulputate quis. In rhoncus a odio a venenatis.
+
+Vivamus fringilla dolor dolor, vitae elementum nisl facilisis nec. Nam nec quam maximus, porta diam a, tempus libero. Donec mollis vitae tortor in elementum. Ut dignissim, arcu ut fermentum commodo, urna est suscipit lectus, volutpat interdum est elit sollicitudin nisl. Mauris et laoreet nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis dictum, velit vel ullamcorper porta, nulla massa feugiat lacus, vel ornare ante nulla eu mi. Pellentesque tristique tempus tellus vel accumsan. In egestas massa feugiat tortor rutrum, malesuada ultricies ante dapibus. Curabitur lobortis, quam nec pellentesque ultrices, velit tellus rhoncus odio, sed semper ante lacus sed justo.`}
+            </div>
           </div>
-          <section className="text-center uppercase pt-24 text-stone-200">
-            <h4 className="text-3xl tracking-[.4em]">Address</h4>
-            <div className="pt-6">
-              <div className="text-2xl">500 Terry A Francois Blvd</div>
-              <div className="text-lg">San Francisco, CA 94158, USA</div>
-            </div>
-          </section>
-          <section className="text-center uppercase pt-20 text-stone-200">
-            <h4 className="text-3xl tracking-[.4em]">Hours</h4>
-            <div className="text-2xl pt-6">
-              <div>Monday - Friday</div>
-              <div>6:30AM - 7:00PM</div>
-            </div>
-          </section>
         </div>
+
+        <div className="w-1/2 bg-[url('/home/OurPic4.jpg')] bg-cover bg-center">
+          </div>
       </div>
     </div>
   );

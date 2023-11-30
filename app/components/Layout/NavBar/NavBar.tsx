@@ -7,18 +7,9 @@ import { StyledNavLink } from '@app/components/Layout/NavBar/NavLink';
 
 const navbarItems = [
   { scroll: true, ref: '/', label: 'Home' },
-  { scroll: false, ref: '/#about', label: 'About' },
-  { scroll: false, ref: '/#studio', label: 'The Studio' },
-  { scroll: true, ref: '/training', label: 'Training' },
-  { scroll: true, ref: '/classes-schedule', label: 'Book Online' },
-  { scroll: true, ref: '/plans', label: 'Plans & Pricing' },
-  { scroll: false, ref: '/#contact', label: 'Contact' },
-  {
-    scroll: true,
-    ref: '/account/my-account',
-    label: 'My Account',
-    prefetch: false,
-  },
+  { scroll: false, ref: '/#about', label: 'Timeline' },
+  { scroll: false, ref: '/#studio', label: 'Letter to u' },
+  { scroll: true, ref: '/', label: 'Flower' },
 ];
 
 export function NavBar() {
