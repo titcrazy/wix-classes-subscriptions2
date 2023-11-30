@@ -1,13 +1,12 @@
-import React from "react";
-import { Chrono } from "react-chrono";
-import data from "app/components/TimelineData/Data";
+import React from 'react';
+import { Chrono } from 'react-chrono';
+import data from 'app/components/TimelineData/Data';
 import 'app/components/TimelineData/style.css';
-
 
 export default function App() {
   return (
     <div className="App">
-      <div style={{ width: "100%", height: "95vh" }}>
+      <div style={{ width: '100%', height: '95vh' }}>
         <Chrono
           items={data}
           mode="VERTICAL_ALTERNATING"
@@ -18,13 +17,13 @@ export default function App() {
           cardWidth={650}
           cardHeight={300}
           fontSizes={{
-            title: "1rem"
+            title: '1rem',
           }}
         >
           <div>
-            <div style={{ width: "250px", height: "250px" }}>
+            <div style={{ width: '250px', height: '250px' }}>
               <img
-                style={{ maxWidth: "100%", maxHeight: "100%" }}
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
                 alt="test"
                 src="https://cdn.tutsplus.com/net/uploads/2013/08/github-collab-retina-preview.gif"
               />
@@ -53,7 +52,7 @@ export default function App() {
               After the Phoney War, the Battle of France began in earnest on 10
               May 1940. To the east, the German Army Group B invaded the
               Netherlands and advanced westward. In response, the Supreme Allied
-              Commander—French General Maurice Gamelin—initiated "Plan D" and
+              Commander—French General Maurice Gamelin—initiated Plan D and
               entered Belgium to engage the Germans in the Netherlands. The plan
               relied heavily on the Maginot Line fortifications along the
               German–French border, but German forces had already crossed
@@ -63,7 +62,7 @@ export default function App() {
               British Expeditionary Force (BEF), to the River Dyle.
             </p>
           </div>
-          <div style={{ margin: "1rem" }}>
+          <div style={{ margin: '1rem' }}>
             <h3>Table</h3>
             <table>
               <thead>

@@ -10,7 +10,7 @@ import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import testIds from '@app/utils/test-ids';
 import { Amatic_SC } from 'next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
-import App from "app/components/TimelineData/TimelineApp"
+import App from 'app/components/TimelineData/TimelineApp';
 import { max } from 'date-fns';
 
 const ShadowIntoLight = Amatic_SC({
@@ -114,7 +114,7 @@ export default function Home() {
               happy anniversary bby ❤️
             </div>
           </div>
-          
+
           <div className="">
             <CountUpTimer />
           </div>
@@ -123,10 +123,7 @@ export default function Home() {
 
       <ScrollIntoView hashName="#about" offset="-90px" />
       <div className="min-h-screen bg-[url('/home/fitness-background-2.jpg')] parallax-background">
-
-        <div style={{ width: '100%', height: '500px' }}>
-          {/* <App /> */}
-        </div>
+        <div style={{ width: '100%', height: '500px' }}>{/* <App /> */}</div>
 
         <div className="max-w-full-content mx-auto box-content pt-2">
           <div className="max-w-[400px] pt-10 pb-2">
@@ -183,12 +180,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+
       <ScrollIntoView hashName="#studio" offset="-90px" />
       <div className="flex">
-        <div className='bg-[#94746e] parallax-background w-1/2 flex justify-center'>
-          <div className="max-w-md py-16" >
-            <h2 className="title tracking-widest">A MESSAGE TO MY LITTLE PRINCESS</h2>
+        <div className="bg-[#94746e] parallax-background w-1/2 flex justify-center">
+          <div className="max-w-md py-16">
+            <h2 className="title tracking-widest">
+              A MESSAGE TO MY LITTLE PRINCESS
+            </h2>
             <div className="pt-7 font-open-sans-condensed text-lg text-stone-300">
               {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in quam non justo dapibus rhoncus eu at magna. Nulla non sapien pulvinar, hendrerit lacus sed, semper nisi. Aenean metus arcu, laoreet vel magna ac, lobortis iaculis mi. Cras suscipit accumsan blandit. Sed gravida enim at est efficitur blandit a non ligula. Duis purus lorem, consectetur eu consequat nec, viverra sed urna. Curabitur et pretium ex, posuere gravida enim. Donec commodo arcu leo, a mattis nunc viverra vel. Duis id finibus sem. Nulla hendrerit nibh quis mauris tincidunt sodales. Sed pellentesque risus sed nibh eleifend efficitur. In eu dictum magna, eget elementum ipsum. Nullam quam nisi, aliquam vel nisi sit amet, ornare sollicitudin ex.
 
@@ -203,8 +202,7 @@ Vivamus fringilla dolor dolor, vitae elementum nisl facilisis nec. Nam nec quam 
           </div>
         </div>
 
-        <div className="w-1/2 bg-[url('/home/OurPic4.jpg')] bg-cover bg-center">
-          </div>
+        <div className="w-1/2 bg-[url('/home/OurPic4.jpg')] bg-cover bg-center"></div>
       </div>
     </div>
   );

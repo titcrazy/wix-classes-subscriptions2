@@ -9,7 +9,7 @@ const navbarItems = [
   { scroll: true, ref: '/', label: 'Home' },
   { scroll: false, ref: '/#about', label: 'Timeline' },
   { scroll: false, ref: '/#studio', label: 'Letter to u' },
-  { scroll: true, ref: '/', label: 'Flower' },
+  { scroll: true, ref: '/index.html', label: 'Flower' },
 ];
 
 export function NavBar() {
@@ -51,7 +51,7 @@ export function NavBar() {
         } w-full transition-all duration-500 ease-in-out md:block overflow-hidden max-md:absolute max-md:animate-sideways-once max-md:h-screen max-md:bg-teal-400 max-md:pt-24 z-40 top-0 right-0`}
       >
         <ul className="flex flex-col justify-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-8 start text-md leading-[22px] items-center">
-          {navbarItems.map(({ ref, label, scroll, prefetch }) => (
+          {navbarItems.map(({ ref, label, scroll }) => (
             <li key={ref} className="relative">
               <StyledNavLink
                 isActive={ref === linkRef}
@@ -61,7 +61,6 @@ export function NavBar() {
                   setIsMenuShown(false);
                 }}
                 scroll={scroll}
-                prefetch={prefetch}
               >
                 {label}
               </StyledNavLink>

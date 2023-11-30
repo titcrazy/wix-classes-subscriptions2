@@ -27,22 +27,23 @@ const Footer = () => (
     data-testid={testIds.LAYOUT.FOOTER}
   >
     <div className="w-full flex overflow-hidden">
-      <div className='-mt-20 ml-24 opacity-50'>
-      <Image
-            src="/common/infinite.png"
-            width={1400}
-            height={1400}
-            alt="share image"
-          />
+      <div className="-mt-20 ml-24 opacity-50">
+        <Image
+          src="/common/infinite.png"
+          width={1400}
+          height={1400}
+          alt="share image"
+        />
       </div>
       <div className="pt-10">
         <div className=" border-yellow-300 w-2/3 float-right">
           <p className="uppercase mb-5 text-3xl tracking-[.2em] ml-20">
-          “Take my hand, take my whole life too. For I can’t help falling in love with you.”
+            “Take my hand, take my whole life too. For I can’t help falling in
+            love with you.”
           </p>
           <h2 className="uppercase float-right mb-5 text-3xl tracking-[.1em] mr-7">
-             – Elvis Presley
-            </h2>
+            – Elvis Presley
+          </h2>
         </div>
       </div>
     </div>
