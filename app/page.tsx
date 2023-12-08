@@ -12,6 +12,10 @@ import { Amatic_SC } from 'next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
 import App from 'app/components/TimelineData/TimelineApp';
 import { max } from 'date-fns';
+import VerticalTimelineComponent from '/Users/titcrazy/AnniProjectBackup1 copy 7/app/components/VerticalTimeline/Timeline.jsx';
+import 'app/components/VerticalTimeline/style.css';
+import React, { useEffect, useRef } from 'react';
+
 
 const ShadowIntoLight = Amatic_SC({
   weight: '400',
@@ -49,6 +53,7 @@ const TrainingOptionSelection = ({
     </div>
   </a>
 );
+
 
 const AchievementItem = ({
   title,
@@ -99,6 +104,58 @@ const GalleryItem = ({
 );
 
 export default function Home() {
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const timeline = timelineRef.current;
+
+      if (timeline) {
+        // Handle bounce-in for elements with class 'is-hidden'
+        const hiddenElements = timeline.getElementsByClassName('is-hidden');
+
+        for (const element of hiddenElements) {
+          const rect = (element as HTMLElement).getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+          if (isVisible) {
+            (element as HTMLElement).classList.remove('is-hidden');
+            (element as HTMLElement).classList.add('bounce-in');
+          }
+        }
+
+        // Handle bounce-in for icons in elements with class 'vertical-timeline-element--no-children'
+        const noChildrenElements = timeline.getElementsByClassName('vertical-timeline-element vertical-timeline-element--no-children');
+
+        for (const element of noChildrenElements) {
+          const rect = (element as HTMLElement).getBoundingClientRect();
+          const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+          if (isVisible) {
+            const icon = element.querySelector('.vertical-timeline-element-icon');
+            if (icon) {
+              (icon as HTMLElement).classList.add('bounce-in');
+            }
+
+            // Check if the element has class 'vertical-timeline-element-content'
+            const content = element.querySelector('.vertical-timeline-element-content');
+            if (content) {
+              (content as HTMLElement).classList.remove('bounce-in');
+              (content as HTMLElement).classList.add('is-hidden');
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
     <div>
       <div
@@ -121,89 +178,50 @@ export default function Home() {
         </section>
       </div>
 
-      <ScrollIntoView hashName="#about" offset="-90px" />
-      <div className="min-h-screen bg-[url('/home/fitness-background-2.jpg')] parallax-background">
-        <div style={{ width: '100%', height: '500px' }}>{/* <App /> */}</div>
-
-        <div className="max-w-full-content mx-auto box-content pt-2">
-          <div className="max-w-[400px] pt-10 pb-2">
-            <h2 className="uppercase text-7xl leading-tight py-7">
-              Meet The Coach
-            </h2>
-
-            <section className="mt-5">
-              <ul aria-label="Social Bar" className="flex gap-2 invert -ml-3">
-                <li>
-                  <a
-                    href="http://www.facebook.com/wix"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Image
-                      width={43}
-                      height={43}
-                      alt="Facebook"
-                      src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://www.twitter.com/wix"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Image
-                      width={43}
-                      height={43}
-                      src="https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png"
-                      alt="Twitter"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com/wix/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Image
-                      width={43}
-                      height={43}
-                      src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png"
-                      alt="Instagram"
-                    />
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </div>
-
-      <ScrollIntoView hashName="#studio" offset="-90px" />
+      <ScrollIntoView hashName="#lettertou" offset="-90px" />
       <div className="flex">
         <div className="bg-[#94746e] parallax-background w-1/2 flex justify-center">
           <div className="max-w-md py-16">
-            <h2 className="title tracking-widest">
+            <h2 className="title tracking-[2.em] mx-10">
               A MESSAGE TO MY LITTLE PRINCESS
             </h2>
-            <div className="pt-7 font-open-sans-condensed text-lg text-stone-300">
-              {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in quam non justo dapibus rhoncus eu at magna. Nulla non sapien pulvinar, hendrerit lacus sed, semper nisi. Aenean metus arcu, laoreet vel magna ac, lobortis iaculis mi. Cras suscipit accumsan blandit. Sed gravida enim at est efficitur blandit a non ligula. Duis purus lorem, consectetur eu consequat nec, viverra sed urna. Curabitur et pretium ex, posuere gravida enim. Donec commodo arcu leo, a mattis nunc viverra vel. Duis id finibus sem. Nulla hendrerit nibh quis mauris tincidunt sodales. Sed pellentesque risus sed nibh eleifend efficitur. In eu dictum magna, eget elementum ipsum. Nullam quam nisi, aliquam vel nisi sit amet, ornare sollicitudin ex.
-
-Ut elementum neque justo, eu vehicula enim iaculis nec. Donec nec nisi interdum lacus scelerisque sagittis at non justo. Duis sollicitudin lacus eget turpis dignissim aliquet. Sed consequat arcu non malesuada rutrum. Morbi vestibulum dolor malesuada velit sollicitudin, eget egestas libero vehicula. Ut in dui magna. Sed id turpis eget erat congue mollis. Duis rutrum scelerisque diam sed tincidunt. Nulla sem metus, vestibulum non suscipit sit amet, egestas vestibulum metus. Aenean eget sem justo.
-
-Nam euismod ligula id arcu ultricies faucibus. Aliquam vel tincidunt ex, ut tempor quam. Nunc rutrum mi eu nunc tempus facilisis. Mauris finibus sodales nibh, quis porttitor arcu lobortis id. Etiam posuere enim elit, ac scelerisque ex consectetur sit amet. Vivamus congue elementum velit, sed accumsan augue interdum et. Integer at tellus id arcu tincidunt porta.
-
-Pellentesque sodales viverra neque a maximus. In pulvinar in augue in consectetur. In quis nulla justo. Curabitur eu lacus velit. Fusce rutrum sollicitudin nunc. Etiam nec nisi pharetra, vulputate velit at, molestie sapien. Vestibulum scelerisque lorem in tempus commodo. Etiam vitae vulputate ipsum. Maecenas sed elit eget lectus sodales cursus vel at erat. Sed iaculis nunc magna, sit amet tincidunt augue eleifend eget. Fusce leo libero, posuere eu placerat eget, cursus a ante. Etiam congue lacus a ligula pellentesque, vitae accumsan libero ultrices. Morbi dapibus ullamcorper tortor, quis egestas mauris vulputate quis. In rhoncus a odio a venenatis.
-
-Vivamus fringilla dolor dolor, vitae elementum nisl facilisis nec. Nam nec quam maximus, porta diam a, tempus libero. Donec mollis vitae tortor in elementum. Ut dignissim, arcu ut fermentum commodo, urna est suscipit lectus, volutpat interdum est elit sollicitudin nisl. Mauris et laoreet nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis dictum, velit vel ullamcorper porta, nulla massa feugiat lacus, vel ornare ante nulla eu mi. Pellentesque tristique tempus tellus vel accumsan. In egestas massa feugiat tortor rutrum, malesuada ultricies ante dapibus. Curabitur lobortis, quam nec pellentesque ultrices, velit tellus rhoncus odio, sed semper ante lacus sed justo.`}
-            </div>
+            <p className="mx-10 pt-7 font-open-sans-condensed text-lg text-stone-300">
+            Hey,
+  <br /><br />
+  It’s funny how 6 whole months have passed by in a blink of an eye. But the last couple of months have been the most beautiful time of my life.
+  <br /><br />
+  We had a fair share of memories during these wonderful time, from your that happiest of memories like your birthday or graduation, or the lowest point in our relationship such as our fights and arguements, but us still loving each other after all those occasions, happier than ever, just shown that we are meant to be an unbreakable bond. I know the neext few upcoming months will be hard for us because of it's the start of our long-distance journey. But I know it will work out because I know that I have found the one since the first time I met you, the one who will always be here with me, till the end of time :&lt;
+  <br /><br />
+  I’m really lucky to have known a gorgeous, loving, and generous person like you, and my life has been so much better since the day we are together. You’ve changed me from someone who always show his pessimistic side, to someone who loves his life and always smiles more often than not.
+  <br /><br />
+  You deserve to be treated much better than what you have been through, and I’m willing to do anything in my all efforts so that you can receive all the loving that you deserves.
+  <br /><br />
+  Saying thank you is not enough to express how much I appreciate what you have done to me. I love everything about you because, for me, you are the most beautiful person, not only from the outside but also from the inside.
+  <br /><br />
+  I know we don’t have a lot of time left, but I hope that our last 2 months together before long-distance will be the most memorable moments of our life.
+  <br /><br />
+  I hope that you like this gift during our 6th month anniversary, I just wanna say that I will always spend as much time and effort into this relationship as possible just to see you smile and happy, just like how I am willing to spend all my committments to this project for you.
+  <br /><br />
+  Thank you for loving me, for showing all the cares and supports that I have never received before, but most importantly, thank you for coming into my life. I love you more than love itself and my life wouldn't mean anything without the presence of you.
+  <br /><br />
+  Love ❤️,
+  <br /> 
+  Tung
+            </p>
           </div>
         </div>
-
-        <div className="w-1/2 bg-[url('/home/OurPic4.jpg')] bg-cover bg-center"></div>
+        <div className="w-2/3 bg-[url('/home/OurPic4.jpg')] bg-no-repeat bg-cover bg-center"></div>
+      </div>
+      
+      <ScrollIntoView hashName="#timeline" offset="-90px" />
+      <div className="flex min-h-fill bg-[url('/home/OurPic.jpg')] parallax-background">
+        <div className='bg-black bg-opacity-50 w-full min-h-fill'>
+            <div ref={timelineRef} className='h-fill'>
+              <VerticalTimelineComponent />
+            </div> 
+        </div>
       </div>
     </div>
+    
   );
 }

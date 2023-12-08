@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+.flowerContainer {
   background-image: linear-gradient(to top, #010329, #000005);
   min-height: 100vh;
   display: flex;
@@ -17,6 +17,7 @@ body {
 
 .flower {
   position: relative;
+  margin-bottom: 10%;
 }
 
 .flower__glass {

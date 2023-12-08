@@ -11,6 +11,12 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.14.19",
+    "@mui/material": "^5.14.20",
     "@next/font": "^14.0.3",
     "@tanstack/react-query": "^4.24.4",
     "@wix/api-client": "^1.5.7",
@@ -34,6 +40,7 @@
     "react-day-picker": "^8.5.1",
     "react-dom": "18.2.0",
     "react-script": "^2.0.5",
+    "react-vertical-timeline-component": "^3.6.0",
     "styled-components": "^6.0.8",
     "stylis": "^4.3.0",
     "yarn": "^1.22.21"

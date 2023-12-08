@@ -3,13 +3,15 @@ import { useCallback, useState } from 'react';
 import type { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 import Login from '@app/components/Login/Login';
-import { StyledNavLink } from '@app/components/Layout/NavBar/NavLink';
+import { StyledNavLink, NavLinkProps } from './NavLink';
+
+
 
 const navbarItems = [
   { scroll: true, ref: '/', label: 'Home' },
-  { scroll: false, ref: '/#about', label: 'Timeline' },
-  { scroll: false, ref: '/#studio', label: 'Letter to u' },
-  { scroll: true, ref: '/index.html', label: 'Flower' },
+  { scroll: false, ref: '/#lettertou', label: 'Letter to u' },
+  { scroll: false, ref: '/#timeline', label: 'Timeline' },
+  { scroll: true, ref: '/flower', label: 'Flower' },
 ];
 
 export function NavBar() {
@@ -50,24 +52,26 @@ export function NavBar() {
           isMenuShown ? 'max-md:w-full' : 'max-md:w-0 max-md:opacity-0'
         } w-full transition-all duration-500 ease-in-out md:block overflow-hidden max-md:absolute max-md:animate-sideways-once max-md:h-screen max-md:bg-teal-400 max-md:pt-24 z-40 top-0 right-0`}
       >
-        <ul className="flex flex-col justify-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-8 start text-md leading-[22px] items-center">
-          {navbarItems.map(({ ref, label, scroll }) => (
-            <li key={ref} className="relative">
-              <StyledNavLink
-                isActive={ref === linkRef}
-                href={ref}
-                onClick={() => {
-                  setLinkRef(ref);
-                  setIsMenuShown(false);
-                }}
-                scroll={scroll}
-              >
-                {label}
-              </StyledNavLink>
-              <span className="absolute -bottom-5 md:hidden w-48 left-[calc(50%_-_theme(space.24))] border" />
-            </li>
-          ))}
-        </ul>
+         <ul className="flex flex-col justify-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-8 start text-md leading-[22px] items-center">
+        {navbarItems.map(({ ref, label, scroll }) => (
+          <li key={ref} className="relative">
+            {/* Use the StyledNavLink component here */}
+            <StyledNavLink
+              isActive={ref === linkRef}
+              href={ref}
+              onClick={() => {
+                setLinkRef(ref);
+                setIsMenuShown(false);
+              }}
+              scroll={scroll}
+              className="your-custom-styles-here"
+            >
+              {label}
+            </StyledNavLink>
+            <span className="absolute -bottom-5 md:hidden w-48 left-[calc(50%_-_theme(space.24))] border" />
+          </li>
+        ))}
+      </ul>
       </nav>
     </>
   );

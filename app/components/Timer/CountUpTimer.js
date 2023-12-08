@@ -7,7 +7,7 @@ const CountUpTimer = () => {
   const [timeElapsed, setTimeElapsed] = useState(0);
 
   useEffect(() => {
-    const startDate = new Date('2023-06-02T00:00:00Z').getTime();
+    const startDate = new Date('2023-06-02T21:28:00Z').getTime();
 
     const updateTimer = () => {
       const currentTime = new Date().getTime();
