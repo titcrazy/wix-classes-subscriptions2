@@ -12,7 +12,7 @@ import { Amatic_SC } from 'next/font/google';
 import CountUpTimer from 'app/components/Timer/CountUpTimer.js';
 import App from 'app/components/TimelineData/TimelineApp';
 import { max } from 'date-fns';
-import VerticalTimelineComponent from '/Users/titcrazy/AnniProjectBackup1 copy 7/app/components/VerticalTimeline/Timeline.jsx';
+import VerticalTimelineComponent from 'app/components/VerticalTimeline/Timeline.jsx';
 import 'app/components/VerticalTimeline/style.css';
 import React, { useEffect, useRef } from 'react';
 

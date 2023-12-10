@@ -1,7 +1,4 @@
-'use client'
-
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,47 +13,35 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-// Replace this with your actual authentication logic
-const authenticateUser = async (email: string, password: string) => {
-  // Simulate a simple authentication logic (replace with your actual logic)
-  return new Promise<boolean>((resolve) => {
-    setTimeout(() => {
-      // Simulate successful authentication for demo purposes
-      const isAuthenticated = email === 'test@example.com' && password === 'password';
-      resolve(isAuthenticated);
-    }, 1000); // Simulating a delay for asynchronous operation
-  });
-};
+function Copyright(props) {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
 
-function SignIn() {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+// TODO remove, this demo shouldn't need to reset the theme.
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+const defaultTheme = createTheme();
+
+export default function SignIn() {
+  const handleSubmit = (event) => {
     event.preventDefault();
-
-    try {
-      // Call your authentication logic
-      const isAuthenticated = await authenticateUser(email, password);
-
-      if (isAuthenticated) {
-        // Redirect to the main layout after successful authentication
-        await router.push('/layout');
-      } else {
-        // Handle unsuccessful authentication
-        setError('Invalid email or password');
-      }
-    } catch (error) {
-      console.error('Error during authentication', error);
-      setError('An error occurred during authentication');
-    }
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
   };
 
   return (
-    <ThemeProvider theme={createTheme()}>
+    <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -73,7 +58,7 @@ function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form onSubmit={handleSubmit} noValidate>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -83,8 +68,6 @@ function SignIn() {
               name="email"
               autoComplete="email"
               autoFocus
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               margin="normal"
@@ -95,24 +78,11 @@ function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
             />
             <FormControlLabel
-              control={
-                <Checkbox
-                  value={rememberMe}
-                  onChange={() => setRememberMe(!rememberMe)}
-                  color="primary"
-                />
-              }
+              control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            {error && (
-              <Typography variant="body2" color="error">
-                {error}
-              </Typography>
-            )}
             <Button
               type="submit"
               fullWidth
@@ -133,11 +103,10 @@ function SignIn() {
                 </Link>
               </Grid>
             </Grid>
-          </form>
+          </Box>
         </Box>
+        <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
   );
 }
-
-export default SignIn;
