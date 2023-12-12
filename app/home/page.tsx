@@ -186,7 +186,7 @@ export default function Home() {
       <div className="flex">
         <div className="bg-[#94746e] parallax-background w-1/2 flex justify-center">
           <div className="max-w-md py-16">
-            <h2 className="title tracking-[2.em] mx-10">
+            <h2 className="title tracking-[1.em] mx-10">
               A MESSAGE TO MY LITTLE PRINCESS
             </h2>
             <p className="mx-10 pt-7 font-open-sans-condensed text-lg text-stone-300">
