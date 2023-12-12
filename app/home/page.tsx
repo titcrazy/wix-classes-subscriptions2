@@ -204,22 +204,22 @@ export default function Home() {
               arguements, but us still loving each other after all those
               occasions, happier than ever, just shown that we are meant to be
               an unbreakable bond. I know the neext few upcoming months will be
-              hard for us because of it's the start of our long-distance
+              hard for us because of it&apos;s the start of our long-distance
               journey. But I know it will work out because I know that I have
               found the one since the first time I met you, the one who will
               always be here with me, till the end of time :&lt;
               <br />
               <br />
-              I’m really lucky to have known a gorgeous, loving, and generous
-              person like you, and my life has been so much better since the day
-              we are together. You’ve changed me from someone who always show
-              his pessimistic side, to someone who loves his life and always
-              smiles more often than not.
+              I&apos;m really lucky to have known a gorgeous, loving, and
+              generous person like you, and my life has been so much better
+              since the day we are together. You&apos;ve changed me from someone
+              who always show his pessimistic side, to someone who loves his
+              life and always smiles more often than not.
               <br />
               <br />
               You deserve to be treated much better than what you have been
-              through, and I’m willing to do anything in my all efforts so that
-              you can receive all the loving that you deserves.
+              through, and I&apos;m willing to do anything in my all efforts so
+              that you can receive all the loving that you deserves.
               <br />
               <br />
               Saying thank you is not enough to express how much I appreciate
@@ -228,9 +228,9 @@ export default function Home() {
               but also from the inside.
               <br />
               <br />
-              I know we don’t have a lot of time left, but I hope that our last
-              2 months together before long-distance will be the most memorable
-              moments of our life.
+              I know we don&apos;t have a lot of time left, but I hope that our
+              last 2 months together before long-distance will be the most
+              memorable moments of our life.
               <br />
               <br />
               I hope that you like this gift during our 6th month anniversary, I
@@ -243,7 +243,7 @@ export default function Home() {
               Thank you for loving me, for showing all the cares and supports
               that I have never received before, but most importantly, thank you
               for coming into my life. I love you more than love itself and my
-              life wouldn't mean anything without the presence of you.
+              life wouldn&apos;t mean anything without the presence of you.
               <br />
               <br />
               Love ❤️,
