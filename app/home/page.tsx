@@ -16,7 +16,6 @@ import VerticalTimelineComponent from 'app/components/VerticalTimeline/Timeline.
 import 'app/components/VerticalTimeline/style.css';
 import React, { useEffect, useRef } from 'react';
 
-
 const ShadowIntoLight = Amatic_SC({
   weight: '400',
   subsets: ['latin'],
@@ -53,7 +52,6 @@ const TrainingOptionSelection = ({
     </div>
   </a>
 );
-
 
 const AchievementItem = ({
   title,
@@ -125,20 +123,26 @@ export default function Home() {
         }
 
         // Handle bounce-in for icons in elements with class 'vertical-timeline-element--no-children'
-        const noChildrenElements = timeline.getElementsByClassName('vertical-timeline-element vertical-timeline-element--no-children');
+        const noChildrenElements = timeline.getElementsByClassName(
+          'vertical-timeline-element vertical-timeline-element--no-children'
+        );
 
         for (const element of noChildrenElements) {
           const rect = (element as HTMLElement).getBoundingClientRect();
           const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
           if (isVisible) {
-            const icon = element.querySelector('.vertical-timeline-element-icon');
+            const icon = element.querySelector(
+              '.vertical-timeline-element-icon'
+            );
             if (icon) {
               (icon as HTMLElement).classList.add('bounce-in');
             }
 
             // Check if the element has class 'vertical-timeline-element-content'
-            const content = element.querySelector('.vertical-timeline-element-content');
+            const content = element.querySelector(
+              '.vertical-timeline-element-content'
+            );
             if (content) {
               (content as HTMLElement).classList.remove('bounce-in');
               (content as HTMLElement).classList.add('is-hidden');
@@ -155,7 +159,7 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   return (
     <div>
       <div
@@ -186,42 +190,79 @@ export default function Home() {
               A MESSAGE TO MY LITTLE PRINCESS
             </h2>
             <p className="mx-10 pt-7 font-open-sans-condensed text-lg text-stone-300">
-            Hey,
-  <br /><br />
-  It’s funny how 6 whole months have passed by in a blink of an eye. But the last couple of months have been the most beautiful time of my life.
-  <br /><br />
-  We had a fair share of memories during these wonderful time, from your that happiest of memories like your birthday or graduation, or the lowest point in our relationship such as our fights and arguements, but us still loving each other after all those occasions, happier than ever, just shown that we are meant to be an unbreakable bond. I know the neext few upcoming months will be hard for us because of it's the start of our long-distance journey. But I know it will work out because I know that I have found the one since the first time I met you, the one who will always be here with me, till the end of time :&lt;
-  <br /><br />
-  I’m really lucky to have known a gorgeous, loving, and generous person like you, and my life has been so much better since the day we are together. You’ve changed me from someone who always show his pessimistic side, to someone who loves his life and always smiles more often than not.
-  <br /><br />
-  You deserve to be treated much better than what you have been through, and I’m willing to do anything in my all efforts so that you can receive all the loving that you deserves.
-  <br /><br />
-  Saying thank you is not enough to express how much I appreciate what you have done to me. I love everything about you because, for me, you are the most beautiful person, not only from the outside but also from the inside.
-  <br /><br />
-  I know we don’t have a lot of time left, but I hope that our last 2 months together before long-distance will be the most memorable moments of our life.
-  <br /><br />
-  I hope that you like this gift during our 6th month anniversary, I just wanna say that I will always spend as much time and effort into this relationship as possible just to see you smile and happy, just like how I am willing to spend all my committments to this project for you.
-  <br /><br />
-  Thank you for loving me, for showing all the cares and supports that I have never received before, but most importantly, thank you for coming into my life. I love you more than love itself and my life wouldn't mean anything without the presence of you.
-  <br /><br />
-  Love ❤️,
-  <br /> 
-  Tung
+              Hey,
+              <br />
+              <br />
+              It’s funny how 6 whole months have passed by in a blink of an eye.
+              But the last couple of months have been the most beautiful time of
+              my life.
+              <br />
+              <br />
+              We had a fair share of memories during these wonderful time, from
+              your that happiest of memories like your birthday or graduation,
+              or the lowest point in our relationship such as our fights and
+              arguements, but us still loving each other after all those
+              occasions, happier than ever, just shown that we are meant to be
+              an unbreakable bond. I know the neext few upcoming months will be
+              hard for us because of it's the start of our long-distance
+              journey. But I know it will work out because I know that I have
+              found the one since the first time I met you, the one who will
+              always be here with me, till the end of time :&lt;
+              <br />
+              <br />
+              I’m really lucky to have known a gorgeous, loving, and generous
+              person like you, and my life has been so much better since the day
+              we are together. You’ve changed me from someone who always show
+              his pessimistic side, to someone who loves his life and always
+              smiles more often than not.
+              <br />
+              <br />
+              You deserve to be treated much better than what you have been
+              through, and I’m willing to do anything in my all efforts so that
+              you can receive all the loving that you deserves.
+              <br />
+              <br />
+              Saying thank you is not enough to express how much I appreciate
+              what you have done to me. I love everything about you because, for
+              me, you are the most beautiful person, not only from the outside
+              but also from the inside.
+              <br />
+              <br />
+              I know we don’t have a lot of time left, but I hope that our last
+              2 months together before long-distance will be the most memorable
+              moments of our life.
+              <br />
+              <br />
+              I hope that you like this gift during our 6th month anniversary, I
+              just wanna say that I will always spend as much time and effort
+              into this relationship as possible just to see you smile and
+              happy, just like how I am willing to spend all my committments to
+              this project for you.
+              <br />
+              <br />
+              Thank you for loving me, for showing all the cares and supports
+              that I have never received before, but most importantly, thank you
+              for coming into my life. I love you more than love itself and my
+              life wouldn't mean anything without the presence of you.
+              <br />
+              <br />
+              Love ❤️,
+              <br />
+              Tung
             </p>
           </div>
         </div>
         <div className="w-2/3 bg-[url('/home/OurPic4.jpg')] bg-no-repeat bg-cover bg-center"></div>
       </div>
-      
+
       <ScrollIntoView hashName="#timeline" offset="-90px" />
       <div className="flex min-h-fill bg-[url('/home/OurPic.jpg')] parallax-background">
-        <div className='bg-black bg-opacity-50 w-full min-h-fill'>
-            <div ref={timelineRef} className='h-fill'>
-              <VerticalTimelineComponent />
-            </div> 
+        <div className="bg-black bg-opacity-50 w-full min-h-fill">
+          <div ref={timelineRef} className="h-fill">
+            <VerticalTimelineComponent />
+          </div>
         </div>
       </div>
     </div>
-    
   );
 }

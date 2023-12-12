@@ -21,7 +21,7 @@ export default function App() {
               <img
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
                 alt="test"
-                src= 'public/home/OurPic.jpg'
+                src="public/home/OurPic.jpg"
               />
             </div>
           </div>

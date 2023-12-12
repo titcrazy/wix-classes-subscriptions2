@@ -21,7 +21,10 @@ export default function RootLayout(layoutProps: any) {
           content="This is a small project for my baby ❤️"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="https://drive.google.com/uc?export=view&id=1wi8XaEmXYLGHXkz_5mcXNFw5NRGIilmu" />
+        <link
+          rel="icon"
+          href="https://drive.google.com/uc?export=view&id=1wi8XaEmXYLGHXkz_5mcXNFw5NRGIilmu"
+        />
       </head>
       {wixSession.wixClient ? (
         <body className="parallax-background">

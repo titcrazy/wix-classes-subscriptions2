@@ -4,7 +4,6 @@ import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import Link from 'next/link';
 import testIds from '@app/utils/test-ids';
 
-
 const FooterNote = () => (
   <div className="text-sm font-open-sans-condensed text-gray-c1 float-right">
     <span>©2035 BY JOEY DIXON </span>

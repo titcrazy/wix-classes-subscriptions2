@@ -18,7 +18,10 @@ const SignInLayout: React.FC<SignInLayoutProps> = ({ children }) => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
         />
-        <link rel="icon" href="https://drive.google.com/uc?export=view&id=1wi8XaEmXYLGHXkz_5mcXNFw5NRGIilmu" />
+        <link
+          rel="icon"
+          href="https://drive.google.com/uc?export=view&id=1wi8XaEmXYLGHXkz_5mcXNFw5NRGIilmu"
+        />
       </head>
       <body className="bg-gray-100">
         <div className="container mx-auto max-w-md p-8 bg-white rounded-md shadow-md">
@@ -30,4 +33,3 @@ const SignInLayout: React.FC<SignInLayoutProps> = ({ children }) => {
 };
 
 export default SignInLayout;
-

@@ -1,6 +1,6 @@
 // SignIn.tsx
 
-'use client'
+'use client';
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
@@ -16,7 +16,10 @@ const SignIn: React.FC = () => {
     const enteredPassword = data.get('password') as string;
 
     // Check if the entered credentials are valid
-    if (enteredUsername === 'Tungthichanvai' && enteredPassword === 'Ngaphaiyeutungforever') {
+    if (
+      enteredUsername === 'Tungthichanvai' &&
+      enteredPassword === 'Ngaphaiyeutungforever'
+    ) {
       // Redirect to the home page
       router.push('/home');
     } else {

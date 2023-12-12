@@ -33,7 +33,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/components/Timer/CountUpTimer.js"
-, "app/signin/page.tsx", "app/signin/test.tsx"  ],
+    "app/components/Timer/CountUpTimer.js",
+    "app/signin/page.tsx",
+    "app/signin/test.tsx"
+  ],
   "exclude": ["node_modules"]
 }
