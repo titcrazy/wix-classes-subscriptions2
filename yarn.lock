@@ -2164,11 +2164,11 @@ __metadata:
   linkType: hard
 
 "@next/font@npm:^14.0.3":
-  version: 14.0.3
-  resolution: "@next/font@npm:14.0.3"
+  version: 14.0.4
+  resolution: "@next/font@npm:14.0.4"
   peerDependencies:
     next: "*"
-  checksum: a557be9db8255bc75338325258e06e0da921b363b466c8603a5b2b3ec844a8ca3aa1a2b7c84a23ba92df979658967d603e65393cb2dc0e19393df4ce77fe0a2b
+  checksum: df1d12993754809ed0f1158e9a99f3d22df36c83761b2dff3d974aa9b050b4a7825d67eac55c92089b7aa30c7bc34b1761b17dbb6e78a5860e83062d1497a58e
   languageName: node
   linkType: hard
 
