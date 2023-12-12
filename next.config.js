@@ -1,10 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+// next.config.js
+module.exports = {
   async rewrites() {
     return [
       {
         source: '/api/v1/catalog/services',
         destination: 'https://www.wixapis.com/bookings/v1/catalog/services',
+      },
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/signin',
+        permanent: true,
       },
     ];
   },
@@ -22,5 +31,3 @@ const nextConfig = {
     formats: ['image/webp'],
   },
 };
-
-module.exports = nextConfig;

@@ -8,10 +8,10 @@ import { StyledNavLink, NavLinkProps } from './NavLink';
 
 
 const navbarItems = [
-  { scroll: true, ref: '/', label: 'Home' },
-  { scroll: false, ref: '/#lettertou', label: 'Letter to u' },
-  { scroll: false, ref: '/#timeline', label: 'Timeline' },
-  { scroll: true, ref: '/flower', label: 'Flower' },
+  { scroll: true, ref: '/home', label: 'Home' },
+  { scroll: false, ref: '/home/#lettertou', label: 'Letter to u' },
+  { scroll: false, ref: '/home/#timeline', label: 'Timeline' },
+  { scroll: true, ref: '/home/flower', label: 'Flower' },
 ];
 
 export function NavBar() {

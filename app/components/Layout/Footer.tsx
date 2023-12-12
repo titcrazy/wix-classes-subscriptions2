@@ -4,6 +4,7 @@ import ScrollIntoView from '@app/components/ScrollIntoView/ScrollIntoView';
 import Link from 'next/link';
 import testIds from '@app/utils/test-ids';
 
+
 const FooterNote = () => (
   <div className="text-sm font-open-sans-condensed text-gray-c1 float-right">
     <span>©2035 BY JOEY DIXON </span>
@@ -23,7 +24,7 @@ const FooterNote = () => (
 
 const Footer = () => (
   <footer
-    className="w-full m-h-10 bg-[#0b6f78] flex parallax-background"
+    className="w-full m-h-10 bg-[#0b6f78] parallax-background"
     data-testid={testIds.LAYOUT.FOOTER}
   >
     <div className="w-full flex overflow-hidden">

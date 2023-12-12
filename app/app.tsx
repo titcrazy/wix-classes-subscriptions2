@@ -1,7 +1,17 @@
-import type { AppProps } from 'next/app'
+// App.tsx
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from '../app/home/page';
+import SignIn from '../app/signin/page';
 
-export default MyApp
+const App = () => (
+      <Router>
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          {/* Other routes */}
+        </Routes>
+      </Router>
+  );
+  
+  export default App;
