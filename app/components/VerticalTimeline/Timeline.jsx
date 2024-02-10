@@ -13,7 +13,7 @@ import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
 // Import your local images
 const images = [];
 for (let i = 1; i <= 46; i++) {
-  images.push(require(`public/gallery/TimelineImage/image${i}.jpg`));
+  images.push(require(`public/gallery/TimelineImage/${i}.jpg`));
 }
 
 export default function VerticalTimelineComponent() {
