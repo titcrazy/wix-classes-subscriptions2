@@ -3,10 +3,6 @@ import Footer from '@app/components/Layout/Footer';
 import Header from '@app/components/Layout/Header';
 import { useServerAuthSession } from '@app/hooks/useServerAuthSession';
 
-/**
- * Using force dynamic so changes in business assets (e.g. services) are immediately reflected.
- * If you prefer having it reflected only after redeploy (not recommended) please remove it
- * **/
 export const revalidate = 0;
 
 export default function RootLayout(layoutProps: any) {
@@ -15,18 +11,27 @@ export default function RootLayout(layoutProps: any) {
   return (
     <html lang="en">
       <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-        <meta http-equiv="X-Content-Type-Options" content="nosniff">
-        <meta http-equiv="X-Frame-Options" content="DENY">
-        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-        <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
         <title>Anniversary Project</title>
         <meta
           name="6th Month Anniversary Project"
           content="This is a small project for my baby ❤️"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self';"
+        />
+        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+        <meta http-equiv="X-Frame-Options" content="DENY" />
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+        <meta
+          http-equiv="Referrer-Policy"
+          content="strict-origin-when-cross-origin"
+        />
+        <meta
+          http-equiv="Strict-Transport-Security"
+          content="max-age=31536000; includeSubDomains; preload"
+        />
         <link
           rel="icon"
           href="https://drive.google.com/uc?export=view&id=1wi8XaEmXYLGHXkz_5mcXNFw5NRGIilmu"
