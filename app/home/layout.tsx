@@ -17,21 +17,6 @@ export default function RootLayout(layoutProps: any) {
           content="This is a small project for my baby ❤️"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="default-src 'self';"
-        />
-        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-        <meta http-equiv="X-Frame-Options" content="DENY" />
-        <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-        <meta
-          http-equiv="Referrer-Policy"
-          content="strict-origin-when-cross-origin"
-        />
-        <meta
-          http-equiv="Strict-Transport-Security"
-          content="max-age=31536000; includeSubDomains; preload"
-        />
         <link
           rel="icon"
           href="https://drive.google.com/uc?export=view&id=1wi8XaEmXYLGHXkz_5mcXNFw5NRGIilmu"
