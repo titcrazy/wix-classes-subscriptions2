@@ -15,6 +15,12 @@ export default function RootLayout(layoutProps: any) {
   return (
     <html lang="en">
       <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+        <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
         <title>Anniversary Project</title>
         <meta
           name="6th Month Anniversary Project"
