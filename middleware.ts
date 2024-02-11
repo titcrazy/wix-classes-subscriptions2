@@ -14,10 +14,12 @@ const setVisitorTokens = async ({
   response,
 }: {
   wixClient: WixClientType;
-  request: NextRequest;
   response: NextResponse;
 }) => {
-  const tokens = await wixClient!.auth.generateVisitorTokens();
+  if (!wixClient) {
+    throw new Error('Wix client is not available');
+  }
+  const tokens = await wixClient.auth.generateVisitorTokens();
   response.cookies.set(WIX_REFRESH_TOKEN, JSON.stringify(tokens.refreshToken), {
     maxAge: 60 * 60 * 24 * 30,
   });
@@ -38,14 +40,14 @@ export async function middleware(request: NextRequest) {
   });
   const isLoggedIn = wixClient?.auth.loggedIn();
   if (!cookies.get(WIX_REFRESH_TOKEN) && !isLoggedIn) {
-    await setVisitorTokens({ response: res, wixClient, request });
+    await setVisitorTokens({ response: res, wixClient });
   }
   const wixMemberLoggedIn = request.nextUrl.searchParams.get(
     REDIRECT_FROM_WIX_LOGIN_STATUS
   );
   if (wixMemberLoggedIn === 'false' && isLoggedIn) {
     cookies.delete(WIX_REFRESH_TOKEN);
-    await setVisitorTokens({ response: res, wixClient, request });
+    await setVisitorTokens({ response: res, wixClient });
   }
   if (
     wixMemberLoggedIn === 'true' ||

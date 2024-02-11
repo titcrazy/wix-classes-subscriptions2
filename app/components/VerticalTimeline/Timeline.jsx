@@ -10,12 +10,25 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
 
-// Import your local images
-const images = [];
-for (let i = 1; i <= 46; i++) {
-  images.push(require(`public/gallery/TimelineImage/${i}.jpg`));
-}
+  // Import images dynamically
+  const importImages = async () => {
+    const images = [];
+    for (let i = 1; i <= 46; i++) {
+      const imagePath = `/gallery/TimelineImage/${i}.jpg`;
+      const image = await import(`.${imagePath}`);
+      images.push(image.default);
+    }
+    return images;
+  };
 
+  // Fetch images
+  const [images, setImages] = useState([]);
+  useState(() => {
+    importImages().then((importedImages) => {
+      setImages(importedImages);
+    });
+  }, []);
+  
 export default function VerticalTimelineComponent() {
   const [showAllItems, setShowAllItems] = useState(false);
 
