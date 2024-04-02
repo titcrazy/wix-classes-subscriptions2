@@ -21,7 +21,7 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: "app/api/pricing-plans-checkout/route.ts",
+        source: "/app/api/pricing-plans-checkout/route.ts",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
