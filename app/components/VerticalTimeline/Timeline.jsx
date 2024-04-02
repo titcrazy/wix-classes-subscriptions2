@@ -9,52 +9,6 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
-import image1 from '/public/gallery/TimelineImage/1.jpg';
-import image2 from '/public/gallery/TimelineImage/2.jpg';
-import image3 from '/public/gallery/TimelineImage/3.jpg';
-import image4 from '/public/gallery/TimelineImage/4.jpg';
-import image5 from '/public/gallery/TimelineImage/5.jpg';
-import image6 from '/public/gallery/TimelineImage/6.jpg';
-import image7 from '/public/gallery/TimelineImage/7.jpg';
-import image8 from '/public/gallery/TimelineImage/8.jpg';
-import image9 from '/public/gallery/TimelineImage/9.jpg';
-import image10 from '/public/gallery/TimelineImage/10.jpg';
-import image11 from '/public/gallery/TimelineImage/11.jpg';
-import image12 from '/public/gallery/TimelineImage/12.jpg';
-import image13 from '/public/gallery/TimelineImage/13.jpg';
-import image14 from '/public/gallery/TimelineImage/14.jpg';
-import image15 from '/public/gallery/TimelineImage/15.jpg';
-import image16 from '/public/gallery/TimelineImage/16.jpg';
-import image17 from '/public/gallery/TimelineImage/17.jpg';
-import image18 from '/public/gallery/TimelineImage/18.jpg';
-import image19 from '/public/gallery/TimelineImage/19.jpg';
-import image20 from '/public/gallery/TimelineImage/20.jpg';
-import image21 from '/public/gallery/TimelineImage/21.jpg';
-import image22 from '/public/gallery/TimelineImage/22.jpg';
-import image23 from '/public/gallery/TimelineImage/23.jpg';
-import image24 from '/public/gallery/TimelineImage/24.jpg';
-import image25 from '/public/gallery/TimelineImage/25.jpg';
-import image26 from '/public/gallery/TimelineImage/26.jpg';
-import image27 from '/public/gallery/TimelineImage/27.jpg';
-import image28 from '/public/gallery/TimelineImage/28.jpg';
-import image29 from '/public/gallery/TimelineImage/29.jpg';
-import image30 from '/public/gallery/TimelineImage/30.jpg';
-import image31 from '/public/gallery/TimelineImage/31.jpg';
-import image32 from '/public/gallery/TimelineImage/32.jpg';
-import image33 from '/public/gallery/TimelineImage/33.jpg';
-import image34 from '/public/gallery/TimelineImage/34.jpg';
-import image35 from '/public/gallery/TimelineImage/35.jpg';
-import image36 from '/public/gallery/TimelineImage/36.jpg';
-import image37 from '/public/gallery/TimelineImage/37.jpg';
-import image38 from '/public/gallery/TimelineImage/38.jpg';
-import image39 from '/public/gallery/TimelineImage/39.jpg';
-import image40 from '/public/gallery/TimelineImage/40.jpg';
-import image41 from '/public/gallery/TimelineImage/41.jpg';
-import image42 from '/public/gallery/TimelineImage/42.jpg';
-import image43 from '/public/gallery/TimelineImage/43.jpg';
-import image44 from '/public/gallery/TimelineImage/44.jpg';
-import image45 from '/public/gallery/TimelineImage/45.jpg';
-import image46 from '/public/gallery/TimelineImage/46.jpg';
 
 export default function VerticalTimelineComponent() {
   const [showAllItems, setShowAllItems] = useState(false);
@@ -66,7 +20,8 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày Trương Tùng không chịu được sự xinh đẹp của Thanh Nga',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image1,
+      image:
+        'https://drive.google.com/uc?export=download&id=1jD-zM1_YqDY67j5py5pwQkkCRXj90m-y', // Add the URL to your image here
     },
     {
       type: 'work',
@@ -74,7 +29,8 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày chuyển giao từ chị em sang anh em',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image2,
+      image:
+        'https://drive.google.com/uc?export=view&id=12iuMbi53CvPJrmpWS60hZbvWGXNsRmIV',
     },
     {
       type: 'work',
@@ -82,15 +38,18 @@ export default function VerticalTimelineComponent() {
       title: 'sự ra đời củ album chung',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image3,
+      image:
+        'https://drive.google.com/uc?export=view&id=14Yalm9yPMMMQvHsBngbLi6VU6xUlnUvk',
     },
     {
       type: 'work',
       date: '12/6',
-      title: 'Trương Tùng uống say xong sang nhà Thanh Nga ôm rồi được tặng dỗi pass',
+      title:
+        'Trương Tùng uống say xong sang nhà Thanh Nga ôm rồi được tặng dỗi pass',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image4,
+      image:
+        'https://drive.google.com/uc?export=view&id=1t19mnvkHN1PwT7ympIg8DPZfw9MdydfE',
     },
     {
       type: 'work',
@@ -98,7 +57,8 @@ export default function VerticalTimelineComponent() {
       title: 'Buổi chơi wescape huyền thoại',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image5,
+      image:
+        'https://drive.google.com/uc?export=view&id=1AbFHMchleeDhNYxJjyDXawHqHRjmolVv',
     },
     {
       type: 'work',
@@ -106,7 +66,8 @@ export default function VerticalTimelineComponent() {
       title: 'Socola tình yêu :)))',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image6,
+      image:
+        'https://drive.google.com/uc?export=view&id=1Ga0AY5LjdiFNyRb89qhZ3S5NYLIKy3c7',
     },
     {
       type: 'work',
@@ -114,7 +75,8 @@ export default function VerticalTimelineComponent() {
       title: 'Sinh nhật Thanh Nga',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image7,
+      image:
+        'https://drive.google.com/uc?export=view&id=1oZpyQAO2XarKjbqe3abIRxoBMltVHROW',
     },
     {
       type: 'work',
@@ -122,7 +84,8 @@ export default function VerticalTimelineComponent() {
       title: 'Bếp trưởng Thanh Nga, phụ bếp Trương Tùng',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image8,
+      image:
+        'https://drive.google.com/uc?export=view&id=1pnJAxqEGLkEOs1PRmcCoWwTjoRMEYgiA',
     },
     {
       type: 'work',
@@ -130,7 +93,8 @@ export default function VerticalTimelineComponent() {
       title: 'Mở cam discord lắp lego :)))',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image9,
+      image:
+        'https://drive.google.com/uc?export=view&id=1SOjs6K1pkF86RMJALE0tFCVLsfRSiZVV',
     },
     {
       type: 'work',
@@ -138,7 +102,8 @@ export default function VerticalTimelineComponent() {
       title: 'Sang nhà chị Alex chơi truth or dare…',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image10,
+      image:
+        'https://drive.google.com/uc?export=view&id=1s41CX3hUMTEr0yjwTUTMja9GVOa7WlId',
     },
     {
       type: 'work',
@@ -146,7 +111,8 @@ export default function VerticalTimelineComponent() {
       title: 'Choảng nhau lần đầu :(((',
       icon: <HeartBrokenIcon />,
       iconColor: 'rgb(128, 128, 128)',
-      image: image11,
+      image:
+        'https://drive.google.com/uc?export=view&id=1R07Ce6pnZYSWcli147SQTmOprUtEvFAX',
     },
     {
       type: 'work',
@@ -154,7 +120,8 @@ export default function VerticalTimelineComponent() {
       title: 'Được chị Alex chụp bộ ảnh rấcccc xịn ạa',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image12,
+      image:
+        'https://drive.google.com/uc?export=view&id=1hvaVPVyQbJ93-MQ1Hq5hDlffG1xU30YW',
     },
     {
       type: 'work',
@@ -162,7 +129,8 @@ export default function VerticalTimelineComponent() {
       title: 'Trương Tùng và Thanh Nga đi tô tượng',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image13,
+      image:
+        'https://drive.google.com/uc?export=view&id=151orURWSYNC4wdCY7JdqNskFyWGDN8kZ',
     },
     {
       type: 'work',
@@ -170,7 +138,8 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày sự thật được phơi bày',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image14,
+      image:
+        'https://drive.google.com/uc?export=view&id=1BdX61-tq4nuLN_v_u3Sr9LnJXYZkJGp6',
     },
     {
       type: 'work',
@@ -178,7 +147,8 @@ export default function VerticalTimelineComponent() {
       title: 'Thanh Nga thả thính :)))',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image15,
+      image:
+        'https://drive.google.com/uc?export=view&id=16NQY3K44ma0hA-ESJjIntOnh3zAkyul6',
     },
     {
       type: 'work',
@@ -186,7 +156,8 @@ export default function VerticalTimelineComponent() {
       title: 'Thanh Nga viết tâm thư chúc đi ngủ',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image16,
+      image:
+        'https://drive.google.com/uc?export=view&id=1RUzb3Dl4m5vNCMMaWgWPBuWLKfKSoc9P',
     },
     {
       type: 'work',
@@ -194,7 +165,8 @@ export default function VerticalTimelineComponent() {
       title: 'Thanh Nga hộ tống đi đu idol',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image17,
+      image:
+        'https://drive.google.com/uc?export=view&id=1tn7Jcote58NK7GEbx6t9i-FYxxYihyW8',
     },
     {
       type: 'work',
@@ -202,7 +174,8 @@ export default function VerticalTimelineComponent() {
       title: 'Mua cafe tặng Thanh Nga ngày bạn gái',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image18,
+      image:
+        'https://drive.google.com/uc?export=view&id=1rqb32Sk-Q7Qpp7qG_85lMd1Rt47WrKD1',
     },
     {
       type: 'work',
@@ -210,7 +183,8 @@ export default function VerticalTimelineComponent() {
       title: 'đượt Thanh Nga mua thuốc sau bồi bổ ạa',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image19,
+      image:
+        'https://drive.google.com/uc?export=view&id=1Dx2ZFwP_C3drv1y4y9g8MMJQRMw7_4tY',
     },
     {
       type: 'work',
@@ -218,7 +192,8 @@ export default function VerticalTimelineComponent() {
       title: 'Nghe lời TNga đi cắt tóc và cái kết',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image20,
+      image:
+        'https://drive.google.com/uc?export=view&id=15Fks8KrC6D8YsKuGgoRsgKfRtO4DMMoK',
     },
     {
       type: 'work',
@@ -226,7 +201,8 @@ export default function VerticalTimelineComponent() {
       title: 'Thức xuyên đêm ăn phở thìn',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image21,
+      image:
+        'https://drive.google.com/uc?export=view&id=1M2-859r9FSD-ggs_9iKbwZwvaKLFBNnp',
     },
     {
       type: 'work',
@@ -234,7 +210,8 @@ export default function VerticalTimelineComponent() {
       title: 'Choảng nhau lần 2 :((((((( ',
       icon: <HeartBrokenIcon />,
       iconColor: 'rgb(128, 128, 128)',
-      image: image22,
+      image:
+        'https://drive.google.com/uc?export=view&id=1UIstqGnPBJm9iqtz3tp6mMBGu9bs5eMQ',
     },
     {
       type: 'work',
@@ -242,7 +219,8 @@ export default function VerticalTimelineComponent() {
       title: 'tuần trăng mật ở SG',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image23,
+      image:
+        'https://drive.google.com/uc?export=view&id=1pxkWWdya1tTShKX3nUpSQl0d5YOa3Wbw',
     },
     {
       type: 'work',
@@ -250,7 +228,8 @@ export default function VerticalTimelineComponent() {
       title: 'Tặng Thanh Nga hoa giấy kỉ niệm 3 tháng yêu nhau',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image24,
+      image:
+        'https://drive.google.com/uc?export=view&id=11q_SChys9YAvSrM5FEgTDKcyee7H9Iq4',
     },
     {
       type: 'work',
@@ -258,7 +237,8 @@ export default function VerticalTimelineComponent() {
       title: 'Tặng hoa giấy xong đượt Thanh Nga viết tâm thư',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image25,
+      image:
+        'https://drive.google.com/uc?export=view&id=1-rUiov0nhZ1At1fftbe5LmouHK9EzxiD',
     },
     {
       type: 'work',
@@ -266,7 +246,8 @@ export default function VerticalTimelineComponent() {
       title: 'Đi thác nước ngắm Thanh Nga',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image26,
+      image:
+        'https://drive.google.com/uc?export=view&id=1xkJ35xBsuPQEMCuMFdlOEzPfjIet5N1S',
     },
     {
       type: 'work',
@@ -274,7 +255,8 @@ export default function VerticalTimelineComponent() {
       title: 'Thử tài làm gốm cùng Thanh Nga',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image27,
+      image:
+        'https://drive.google.com/uc?export=view&id=1QRSQ_ISdDLLKXEy1lFSVkx7_gyjbHrYb',
     },
     {
       type: 'work',
@@ -282,7 +264,8 @@ export default function VerticalTimelineComponent() {
       title: 'Đi xem Thanh Nga nhảy ở trường quân sự',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image28,
+      image:
+        'https://drive.google.com/uc?export=view&id=1U8dsgywuiZxZ1aUIMkAhFL9vQEoKJvm6',
     },
     {
       type: 'work',
@@ -290,7 +273,8 @@ export default function VerticalTimelineComponent() {
       title: 'Cook and eat lần 2',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image29,
+      image:
+        'https://drive.google.com/uc?export=view&id=10QoTlkhYOepxJhMEgdTY5gbO7U151QdW',
     },
     {
       type: 'work',
@@ -298,7 +282,8 @@ export default function VerticalTimelineComponent() {
       title: 'đính hôn nhưng ko bao giờ đeo nhẫn :)))',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image30,
+      image:
+        'https://drive.google.com/uc?export=view&id=10ZJBDL3bsSUESLt1hjzQebEjBQ-NhE0I',
     },
     {
       type: 'work',
@@ -306,7 +291,8 @@ export default function VerticalTimelineComponent() {
       title: 'Được Thanh Nga tặng vỏ airpod đôi',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image31,
+      image:
+        'https://drive.google.com/uc?export=view&id=1uV904D1BrWfOrVJ739p-3E6xjQX4oxJd',
     },
     {
       type: 'work',
@@ -314,7 +300,8 @@ export default function VerticalTimelineComponent() {
       title: 'Tí thì cho TNga leo cây đêm trung thu',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image32,
+      image:
+        'https://drive.google.com/uc?export=view&id=1ZSYWatig64orEmM1dbzTaA_SyiJSLtsu',
     },
     {
       type: 'work',
@@ -322,7 +309,8 @@ export default function VerticalTimelineComponent() {
       title: 'Thanh Nga viết thư tay trên thiệp từ quyển sách giữ 5 năm hơn',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image33,
+      image:
+        'https://drive.google.com/uc?export=view&id=1TA1h7fsIwBTMKGxjplUo6Njzfi5AzPxD',
     },
     {
       type: 'work',
@@ -330,7 +318,8 @@ export default function VerticalTimelineComponent() {
       title: 'Tốt nghiệp Thanh Nga',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image34,
+      image:
+        'https://drive.google.com/uc?export=view&id=19BnvnuYAb8EYuxKebwtK8mlLLaPYNpl9',
     },
     {
       type: 'work',
@@ -338,7 +327,8 @@ export default function VerticalTimelineComponent() {
       title: 'Cook and eat phần thứ 3',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image35,
+      image:
+        'https://drive.google.com/uc?export=view&id=1OUsMQMVqrdfb8eebgqcITXw7JjNi1yfi',
     },
     {
       type: 'work',
@@ -346,7 +336,8 @@ export default function VerticalTimelineComponent() {
       title: 'Trương Tùng dẫn Thanh Nga đi chơi 20/10',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image36,
+      image:
+        'https://drive.google.com/uc?export=view&id=1cpmy9Zwz7i7Pvf2orZ15l8p1zB5eyc7R',
     },
     {
       type: 'work',
@@ -354,7 +345,8 @@ export default function VerticalTimelineComponent() {
       title: 'choảng nhau lần 3',
       icon: <HeartBrokenIcon />,
       iconColor: 'rgb(128, 128, 128)',
-      image: image37,
+      image:
+        'https://drive.google.com/uc?export=view&id=1ui5r60tJoNexlhoazNWL_LApAlrHN5rH',
     },
     {
       type: 'work',
@@ -362,7 +354,8 @@ export default function VerticalTimelineComponent() {
       title: 'Đi chơi halloween',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image38,
+      image:
+        'https://drive.google.com/uc?export=view&id=1YzhJXLRqu0MIdDMnk87Slh2_0U8TniTU',
     },
     {
       type: 'work',
@@ -370,7 +363,8 @@ export default function VerticalTimelineComponent() {
       title: 'Trương Tùng được Thanh Nga tặng healing pills',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image39,
+      image:
+        'https://drive.google.com/uc?export=view&id=1Mh6hL0sDMjbdYY1rY3Dbw1yy_uR0__FS',
     },
     {
       type: 'work',
@@ -378,7 +372,8 @@ export default function VerticalTimelineComponent() {
       title: 'Sang nhà Thanh Nga làm tranh in bàn tay ạaa',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image40,
+      image:
+        'https://drive.google.com/uc?export=view&id=1bQyVgWUO9Ny9kpW5NSNjdLXO5dAxzbya',
     },
     {
       type: 'work',
@@ -386,7 +381,8 @@ export default function VerticalTimelineComponent() {
       title: 'Đi xem Thanh Nga nhảy ạaa',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image41,
+      image:
+        'https://drive.google.com/uc?export=view&id=15EktoEoH1FtwbjoZX6Q4dP0LN-DzSTWY',
     },
     {
       type: 'work',
@@ -394,7 +390,8 @@ export default function VerticalTimelineComponent() {
       title: 'Chụp ảnh cưới',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image42,
+      image:
+        'https://drive.google.com/uc?export=view&id=17ldRHAWZpfyetYNIz_Dn293ROUK8hKlQ',
     },
     {
       type: 'work',
@@ -402,7 +399,8 @@ export default function VerticalTimelineComponent() {
       title: 'Đi ủng hộ chứng nghiện cờ bạc của Thanh Nga',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image43,
+      image:
+        'https://drive.google.com/uc?export=view&id=1pRfW6qLVBdGF5bL1H9CnO-0E5GwDcx7s',
     },
     {
       type: 'work',
@@ -410,7 +408,8 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày con người thật của Trương Tùng bị vạch trần',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image44,
+      image:
+        'https://drive.google.com/uc?export=view&id=1QAeSRRoXASQ0b8pXH-l9ZfqUd3HTv0Zo',
     },
     {
       type: 'work',
@@ -418,7 +417,8 @@ export default function VerticalTimelineComponent() {
       title: 'Đi ăn sáng trong cơn giận dỗi',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: image45,
+      image:
+        'https://drive.google.com/uc?export=view&id=17qzrqEb-F-i3fVUOx3r1p96pb9QIDOd4',
     },
     {
       type: 'work',
@@ -426,9 +426,9 @@ export default function VerticalTimelineComponent() {
       title: 'Thanh Nga mặc sweater Trương Tùng tặng',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: image46,
-    }
-    
+      image:
+        'https://drive.google.com/uc?export=view&id=1AD48qtlfTLu0Ea02nGpv_6K0EE-tKOOp',
+    },
   ];
 
   const initialItemsToShow = 2;
