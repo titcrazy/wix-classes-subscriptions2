@@ -9,17 +9,42 @@ import {
 import { getServerWixClient } from '@app/model/auth/wix-client.server';
 import type { WixClientType } from '@app/model/auth/wix-client.base';
 
+// CORS Configuration
+const corsOptions: {
+  allowedMethods: string[];
+  allowedOrigins: string[];
+  allowedHeaders: string[];
+  exposedHeaders: string[];
+  maxAge?: number;
+  credentials: boolean;
+} = {
+  allowedMethods: ['GET', 'POST', 'PUT', 'DELETE'], // Add your allowed methods here
+  allowedOrigins: ['*'], // Add your allowed origins here
+  allowedHeaders: ['Content-Type', 'Authorization'], // Add your allowed headers here
+  exposedHeaders: [], // Add your exposed headers here
+  maxAge: 60 * 60 * 24 * 30, // 30 days
+  credentials: true,
+};
+
+const setCorsHeaders = (response: NextResponse) => {
+  response.headers.set('Access-Control-Allow-Origin', corsOptions.allowedOrigins.join(','));
+  response.headers.set('Access-Control-Allow-Methods', corsOptions.allowedMethods.join(','));
+  response.headers.set('Access-Control-Allow-Headers', corsOptions.allowedHeaders.join(','));
+  response.headers.set('Access-Control-Expose-Headers', corsOptions.exposedHeaders.join(','));
+  response.headers.set('Access-Control-Max-Age', corsOptions.maxAge?.toString() ?? '');
+  response.headers.set('Access-Control-Allow-Credentials', corsOptions.credentials.toString());
+};
+
 const setVisitorTokens = async ({
   wixClient,
+  request,
   response,
 }: {
   wixClient: WixClientType;
+  request: NextRequest;
   response: NextResponse;
 }) => {
-  if (!wixClient) {
-    throw new Error('Wix client is not available');
-  }
-  const tokens = await wixClient.auth.generateVisitorTokens();
+  const tokens = await wixClient!.auth.generateVisitorTokens();
   response.cookies.set(WIX_REFRESH_TOKEN, JSON.stringify(tokens.refreshToken), {
     maxAge: 60 * 60 * 24 * 30,
   });
@@ -39,15 +64,19 @@ export async function middleware(request: NextRequest) {
     cookieStore: request.cookies,
   });
   const isLoggedIn = wixClient?.auth.loggedIn();
+
+  // Set CORS headers
+  setCorsHeaders(res);
+
   if (!cookies.get(WIX_REFRESH_TOKEN) && !isLoggedIn) {
-    await setVisitorTokens({ response: res, wixClient });
+    await setVisitorTokens({ response: res, wixClient, request });
   }
   const wixMemberLoggedIn = request.nextUrl.searchParams.get(
     REDIRECT_FROM_WIX_LOGIN_STATUS
   );
   if (wixMemberLoggedIn === 'false' && isLoggedIn) {
     cookies.delete(WIX_REFRESH_TOKEN);
-    await setVisitorTokens({ response: res, wixClient });
+    await setVisitorTokens({ response: res, wixClient, request });
   }
   if (
     wixMemberLoggedIn === 'true' ||

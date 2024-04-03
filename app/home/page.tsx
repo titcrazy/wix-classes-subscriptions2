@@ -21,6 +21,8 @@ const ShadowIntoLight = Amatic_SC({
   subsets: ['latin'],
 });
 
+
+
 const TrainingOptionSelection = ({
   text,
   className,
