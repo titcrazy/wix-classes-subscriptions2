@@ -1,5 +1,4 @@
 import { createRedirectCallbacks } from '@app/model/redirects/redirect.utils';
-
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerWixClient } from '@app/model/auth/wix-client.server';
 import { getRequestUrl } from '@app/model/server-utils';
@@ -29,7 +28,20 @@ export async function GET(request: NextRequest) {
         console.error('*** failed redirect session', e);
         throw e;
       })) ?? {};
-  return NextResponse.redirect(
-    redirectSession?.fullUrl ? redirectSession!.fullUrl! : baseUrl
+
+  // Set CORS headers to allow all origins
+  const headers = new Headers();
+  headers.set('Access-Control-Allow-Origin', '*');
+  headers.set('Access-Control-Allow-Methods', 'GET, OPTIONS'); // Add other allowed methods if needed
+  headers.set('Access-Control-Allow-Headers', 'Content-Type');
+
+  const response = new NextResponse(
+    redirectSession?.fullUrl ? redirectSession!.fullUrl! : baseUrl,
+    {
+      status: 302,
+      headers,
+    }
   );
+  
+  return response;
 }
