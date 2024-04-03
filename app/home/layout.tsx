@@ -8,18 +8,6 @@ export const revalidate = 0;
 export default function RootLayout(layoutProps: any) {
   const { children } = layoutProps;
   const wixSession = useServerAuthSession();
-
-  // Set Content-Security-Policy meta tag to allow CORS
-  const setCSPMetaTag = () => {
-    const csp = "script-src 'self' https://drive.google.com; object-src 'none';";
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = csp;
-    document.head.appendChild(meta);
-  };
-
-  setCSPMetaTag();
-
   return (
     <html lang="en">
       <head>
