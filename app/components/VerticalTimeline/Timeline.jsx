@@ -9,7 +9,6 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
-import image1 from 'app/components/VerticalTimeline/resources/1.jpg';
 import image2 from '/public/gallery/TimelineImage/2.jpg';
 import image3 from '/public/gallery/TimelineImage/3.jpg';
 import image4 from '/public/gallery/TimelineImage/4.jpg';
