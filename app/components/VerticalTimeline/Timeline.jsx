@@ -66,7 +66,7 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày Trương Tùng không chịu được sự xinh đẹp của Thanh Nga',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: 'app/components/VerticalTimeline/resources/1.jpg',
+      image: '1.jpg',
     },
     // {
     //   type: 'work',
@@ -453,7 +453,7 @@ export default function VerticalTimelineComponent() {
           {/* Include an image if provided with error handling */}
           {item.image && (
             <img
-              src={require(`${item.image}`)}
+              src={require(`/public/gallery/TimelineImage/${item.image}`)}
               alt="Timeline"
               className="timeline-image"
               onError={(e) => {
