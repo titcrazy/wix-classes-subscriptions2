@@ -452,7 +452,7 @@ export default function VerticalTimelineComponent() {
           {/* Include an image if provided with error handling */}
           {item.image && (
             <img
-              src={require(`/public/gallery/TimelineImage/${item.image}`)}
+              src={`/gallery/TimelineImage/${item.image}`}
               alt="Timeline"
               className="timeline-image"
               onError={(e) => {
