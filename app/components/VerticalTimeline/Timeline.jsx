@@ -9,7 +9,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
-import image1 from '/public/gallery/TimelineImage/1.jpg';
+import image1 from 'app/components/VerticalTimeline/resources/1.jpg';
 import image2 from '/public/gallery/TimelineImage/2.jpg';
 import image3 from '/public/gallery/TimelineImage/3.jpg';
 import image4 from '/public/gallery/TimelineImage/4.jpg';
@@ -66,7 +66,7 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày Trương Tùng không chịu được sự xinh đẹp của Thanh Nga',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: 'app/components/VerticalTimeline/resources/1.jpg',
+      image: image1,
     },
     {
       type: 'work',
