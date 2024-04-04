@@ -66,7 +66,7 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày Trương Tùng không chịu được sự xinh đẹp của Thanh Nga',
       icon: <StarIcon />,
       iconColor: 'rgb(255, 213, 79)',
-      image: src=image1,
+      image: image1,
     },
     {
       type: 'work',
@@ -74,7 +74,7 @@ export default function VerticalTimelineComponent() {
       title: 'Ngày chuyển giao từ chị em sang anh em',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: source = image2,
+      image: image2,
     },
     {
       type: 'work',
@@ -82,7 +82,7 @@ export default function VerticalTimelineComponent() {
       title: 'sự ra đời củ album chung',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: source= image3,
+      image: image3,
     },
     {
       type: 'work',
@@ -90,7 +90,7 @@ export default function VerticalTimelineComponent() {
       title: 'Trương Tùng uống say xong sang nhà Thanh Nga ôm rồi được tặng dỗi pass',
       icon: <FavoriteIcon />,
       iconColor: 'rgb(219, 112, 147)',
-      image: src = image4,
+      image: image4,
     },
     {
       type: 'work',
